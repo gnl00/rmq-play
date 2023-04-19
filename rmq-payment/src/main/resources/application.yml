@@ -1,0 +1,17 @@
+server:
+  port: 8030
+
+spring:
+  application:
+    name: rmq-payment
+rocketmq:
+  name-server: localhost:9876
+  consumer:
+    group: ${spring.application.name}
+
+rmq-play:
+  topic: payToOrder
+  tag: tagA
+  topic-test: payToOrderTest
+  tag-test: tagTest
+  group-test: rmq-payment-test

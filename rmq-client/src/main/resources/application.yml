@@ -1,0 +1,15 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    name: rmq-client
+rocketmq:
+  name-server: localhost:9876
+  producer:
+    send-message-timeout: 10000
+    group: ${spring.application.name}
+
+rmq-play:
+  topic: clientToOrder:tagA
+  topic-test: clientToOrderTest:tagTest

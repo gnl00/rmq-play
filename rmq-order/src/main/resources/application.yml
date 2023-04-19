@@ -1,0 +1,17 @@
+server:
+  port: 8020
+
+spring:
+  application:
+    name: rmq-order
+rocketmq:
+  name-server: localhost:9876
+  consumer:
+    group: ${spring.application.name}
+
+rmq-play:
+  topic: clientToOrder
+  tag: tagA
+  topic-test: clientToOrderTest
+  tag-test: tagTest
+  group-test: rmq-order-test
